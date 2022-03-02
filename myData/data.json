@@ -1,0 +1,24 @@
+
+
+"InsuranceCompanies": {
+  "Top Insurance Companies": [
+    {
+        "No": "1",
+        "Name": "Berkshire Hathaway ( BRK.A)",
+        "Market Capitalization": "$308 billion"
+    }
+    ],
+    "source": "investopedia.com",
+    "Time": "Feb 2019"
+  }
+}
+{'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}
+{'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}
+{'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}
+{'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}
+{'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}
+ConsumerRecord(topic='sample', partition=0, offset=0, timestamp=1642348723629, timestamp_type=0, key=None, value={'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}, headers=[], checksum=None, serialized_key_size=-1, serialized_value_size=285, serialized_header_size=-1)
+ConsumerRecord(topic='sample', partition=0, offset=1, timestamp=1642348888972, timestamp_type=0, key=None, value={'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}, headers=[], checksum=None, serialized_key_size=-1, serialized_value_size=285, serialized_header_size=-1)
+ConsumerRecord(topic='sample', partition=0, offset=2, timestamp=1642348907141, timestamp_type=0, key=None, value={'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}, headers=[], checksum=None, serialized_key_size=-1, serialized_value_size=285, serialized_header_size=-1)
+ConsumerRecord(topic='topic-name', partition=0, offset=49, timestamp=1642348988621, timestamp_type=0, key=None, value={'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}, headers=[], checksum=None, serialized_key_size=-1, serialized_value_size=285, serialized_header_size=-1)
+ConsumerRecord(topic='topic-name', partition=0, offset=50, timestamp=1642349016887, timestamp_type=0, key=None, value={'data': {'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}, headers=[], checksum=None, serialized_key_size=-1, serialized_value_size=285, serialized_header_size=-1)

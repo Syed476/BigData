@@ -1,0 +1,26 @@
+from kafka import KafkaConsumer
+from pymongo import MongoClient
+from json import loads
+
+from data import get_data
+from kafka import KafkaConsumer
+from json import loads
+import json
+
+def json_serializer(data):
+	return json.dumps(data).encode('utf-8')
+def main():
+
+	consumer = KafkaConsumer(
+    	'topic-name',
+     	bootstrap_servers=['localhost:9092'],
+     	auto_offset_reset='earliest',
+     	enable_auto_commit=True,
+     	value_deserializer=json_serializer)
+
+	for message in consumer:
+    		message = message.value
+    		collection.insert_one(message)
+    		print('{} added to {}'.format(message, collection))
+
+main()

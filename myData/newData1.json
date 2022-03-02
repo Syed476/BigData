@@ -1,0 +1,12 @@
+[{
+	"geonameid": "2635167",
+	"name": "United Kingdom",
+	"code": "GB",
+	"depends_on": "None",
+	"currency": [{
+
+		"code": "GBP",
+		"name": "Pound sterling"
+	}],
+	"status": "success"
+}]

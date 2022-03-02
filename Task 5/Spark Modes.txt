@@ -1,0 +1,19 @@
+Spark Modes
+
+Client Mode
+The behaviour of spark job depends on the “driver” component. So “driver” component of spark job will run on the machine from which job is submitted. Hence, this spark mode is basically “client mode”. 
+Driver runs on a dedicated server (Master node) inside a dedicated process. This means it has all available resources at its disposal to execute job. Driver opens a dedicated Netty HTTP server and distributes the JAR files specified to all Worker nodes (it’s a big advantage). Because the Master node has dedicated resources of its own, you don't need to "spend" worker resources for the Driver program. If the driver process dies, you need an external monitoring system to reset its execution.
+
+Cluster Mode
+Here “driver” component of spark job will not run on the local machine from which job is submitted. Hence, this spark mode is basically “cluster mode”. In addition to this, here spark job will launch “driver” component inside the cluster.
+Driver runs on one of the cluster's Worker nodes. The worker is chosen by the Master leader. Driver runs as a dedicated, standalone process inside the Worker. Driver programs takes up at least 1 core and a dedicated amount of memory from one of the workers (this can be configured). Driver program can be monitored from the Master node using the --supervise flag and be reset in case it dies. When working in Cluster mode, all JARs related to the execution of your application need to be publicly available to all the workers. This means you can either manually place them in a shared place or in a folder for each of the workers.
+
+Local Mode
+Local Mode also known as Spark in-process is the default mode of spark. It does not require any resource manager. It runs everything on the same computer. Because of local mode, we can simply download spark and run without having to install any resource manager.
+The easiest way to try out Apache Spark from Python on Faculty is in local mode. The entire processing is done on a single server. I thus still benefit from parallelisation across all the cores in your server, but not across several servers.
+
+Standalone Mode
+In this mode we realized that we run our Master and worker nodes on our local machine. Spark distribution comes with its own resource manager also. When our program uses spark's resource manager, execution mode is called Standalone in our local machine.
+Standalone, for this I will give you some background so you can better understand what it means. Spark is a distributed application which consume resources. For example, memory, CPU and more. Let’s assume that I run 2 spark applications at the same time, this can cause an error when allocating resources. For example, it may happen that the first job consumes all the memory, and the second job would fail because he doesn't have memory.
+To resolve this issue, I need to use some resource manager that will guarantee that my job can run without any problem with resources.
+Standalone, means that spark will handle the management of the resources on the cluster. there are also other resource management tools like Yarn or Mesos. Overall I have 3 options for managing resources on the cluster: Mesos, Yarn and Standalone

@@ -1,0 +1,4 @@
+select id,visit_date,people  
+from( select * , count(*) over (partition by grp)as total 
+from (select * , Sum(case when people < 100 then 1 else 0 end) over (order by visit_date) as grp from stadium)
+ T -- inner Query 1 where people >=100 )S--inner query 2 where total >=3 --outer query

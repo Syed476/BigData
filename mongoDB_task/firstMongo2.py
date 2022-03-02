@@ -10,6 +10,7 @@ collection=db["test"]
 #post2={"_id":31,"name":"john","score":7}
 #collection.insert_many([post1,post2])
 
+
 #collection.insert_many(results)
 # Showing all data from the Database test
 

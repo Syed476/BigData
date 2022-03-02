@@ -1,0 +1,4 @@
+
+
+[{'capital': 'Washington, D.C.', 'code': 'US', 'callingCode': '+1', 'currencyCodes': ['USD'], 'flagImageUri': 'http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States.svg', 'name': 'United States of America', 'numRegions': 57, 'wikiDataId': 'Q30'}}]
+

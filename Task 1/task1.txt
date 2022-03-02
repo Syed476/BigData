@@ -1,0 +1,43 @@
+A Program to request Twitter data
+def get_tweets(api=None, screen_name=None):
+    timeline = api.GetUserTimeline(screen_name=screen_name, count=200)
+    earliest_tweet = min(timeline, key=lambda x: x.id).id
+    print("getting tweets before:", earliest_tweet)
+
+    while True:
+        tweets = api.GetUserTimeline(
+            screen_name=screen_name, max_id=earliest_tweet, count=200
+        )
+        new_earliest = min(tweets, key=lambda x: x.id).id
+
+        if not tweets or new_earliest == earliest_tweet:
+            break
+        else:
+            earliest_tweet = new_earliest
+            print("getting tweets before:", earliest_tweet)
+            timeline += tweets
+
+    return timeline
+if __name__ == "__main__":
+    api = twitter.Api(
+        CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET
+    )
+    screen_name = sys.argv[1]
+    print(screen_name)
+    timeline = get_tweets(api=api, screen_name=screen_name)
+
+    with open('examples/timeline.json', 'w+') as f:
+        for tweet in timeline:
+            f.write(json.dumps(tweet._json))
+            f.write('\n')
+
+Use of Data from Twitter API
+I can use data from Twitter to compose tweets, read profiles, and access my follower’s data. I can also use high volume of tweets on specific subjects in different locations.
+Analysis of Twitter data
+In recent years, there has been an increase in interest in the field of Sentiment Analysis. Sentiment analysis includes what customer want (likes and dislikes). Programmers can use inbuilt sentiment analyser in R to calculate the presence of different emotions by checking corresponding valence in the text.
+Libraries needed for Twitter data
+Programmer can use the tweepy python library. This library makes it easy to connect and fetch data. This library can be installed by using the command pip install tweepy, pip install -r requirements.txt, and pip install python-twitter.
+
+For the setup, programmer installs python setup.py build and python setup.py install
+
+
